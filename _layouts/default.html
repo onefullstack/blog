@@ -9,8 +9,13 @@
     {% include ga.html %}
   </head>
   <body>
-    <section class="hero">
-        <h1>One Full Stack</h1>
-    </section>
+    {% if jekyll.environment == "production" %}
+      {% include coming_soon.html %}
+    {% else %}
+      <nav>
+
+      </nav>
+      {{ content }}
+    {% endif %}
   </body>
 </html>
