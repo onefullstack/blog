@@ -4,3 +4,12 @@
 
 layout: default
 ---
+
+
+<div class="post-date">
+  {{ site.posts.last.date | date: '%w %b %Y' }}
+</div>
+
+# {{ site.posts.last.title }}
+
+{{ site.posts.last.content }}

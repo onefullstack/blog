@@ -1,12 +1,12 @@
-@import url('https://fonts.googleapis.com/css?family=Encode+Sans|Encode+Sans+Semi+Expanded|Jura|Red+Hat+Text&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap');
 
 body {
-    font-family: Jura,'Red Had Text',"Segoe UI",Helvetica,Arial,sans-serif;
-    font-size: 62.5%;
-    line-height: 1.5;
+    font-family: 'Source Sans Pro',sans-serif,Arial;
     color: #24292e;
 }
 
-h1 {
-    font-size: 2rem;
+
+.legal {
+    font-size: 0.7rem;
+    color: $legalFontColor;
 }

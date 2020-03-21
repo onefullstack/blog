@@ -1,9 +1,7 @@
 ---
 ---
 
+@import "variables";
 @import "typography";
 @import "layout";
-
-html, body {
-    height: 100%;
-}
+@import "posts";

@@ -1,10 +1,11 @@
+header.site-header {
+    h1 {
+        padding: 0;
+        margin: 0;
+        font-size: 2rem;
+    }
 
-body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.hero {
-    display: inline-block;
+    h2 {
+        font-size: 1.2rem;
+    }
 }
