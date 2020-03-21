@@ -9,3 +9,13 @@ header.site-header {
         font-size: 1.2rem;
     }
 }
+
+aside.sidebar {
+    display: block;
+}
+
+@include media-breakpoint-down(xs) {
+    aside.sidebar {
+        display: none;
+    }
+}
