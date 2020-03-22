@@ -14,7 +14,6 @@
     <link rel="stylesheet" href="/assets/css/styles.css" />
     <link rel="stylesheet" href="/assets/css/vs.css" />
 
-
     {% if jekyll.environment == "production" %}
       {% include ga.html %}
     {% endif %}
@@ -25,12 +24,14 @@
       {% include header.html %}
       <div class="row">
         <div class="col">
-          {{ content }}
+          <div class="pr-3">
+            {{ content }}
+          </div>
         </div>
         <aside class="col-3 sidebar">
           <nav>
-            <a href="/about">About Me</a></li>
-                                    
+            <a href="/about">About Me</a><br />
+            <a href="https://tinyletter.com/onefullstack" target="_blank">Subscribe to Blog</a>                                    
           </nav>
           <div class="legal">
           Copyright OneFullStack, LLC &copy; {{ "now" | date: "%Y" }}
@@ -39,7 +40,6 @@
        
     </div>
     </div>
-
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>

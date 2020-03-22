@@ -1,5 +1,5 @@
 ---
-title: Rise of the full-stack developer
+title: The rise of the full-stack developer
 layout: post
 ---
 
