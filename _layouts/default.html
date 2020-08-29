@@ -10,14 +10,11 @@
     <title>{{ page.title | default: site.title }}</title>
     {% endif %}
     
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="/assets/css/styles.css" />
-    <link rel="stylesheet" href="/assets/css/vs.css" />
+    {% include default_head.html %}
 
     {% if jekyll.environment == "production" %}
       {% include ga.html %}
     {% endif %}
-    
   </head>
   <body>
     <div class="container">
@@ -29,20 +26,13 @@
           </div>
         </div>
         <aside class="col-3 sidebar">
-          <nav>
-            <a href="/about">About Me</a><br />
-            <a href="https://tinyletter.com/onefullstack" target="_blank">Subscribe to Blog</a>                                    
-          </nav>
-          <div class="legal">
-          Copyright OneFullStack, LLC &copy; {{ "now" | date: "%Y" }}
-          </div>
+          {% include nav.html %}
+          {% include copyright.html %}
         </aside>
-       
-    </div>
+      </div>
+      {% include footer.html %}
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    {% include last.html %}
   </body>
 </html>

@@ -14,7 +14,7 @@ aside.sidebar {
     display: block;
 }
 
-@include media-breakpoint-down(xs) {
+@include media-breakpoint-down(sm) {
     aside.sidebar {
         display: none;
     }

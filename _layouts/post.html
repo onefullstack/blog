@@ -1,7 +1,48 @@
 ---
-layout: default
+
 ---
 
-<h1>{{ page.title }}</h1>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- If Index Page Show Last Post Title -->
+    {% if page.url == '/' %}
+    <title>{{ site.title }} | {{ site.posts.last.title }}</title>
+    {% else %}
+    <title>{{ page.title | default: site.title }}</title>
+    {% endif %}
+    
+    {% include default_head.html %}
+    
+    {% if jekyll.environment == "production" %}
+      {% include ga.html %}
+    {% endif %}
 
-{{ content }}
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.2/build/styles/github-gist.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.2/build/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      {% include header.html %}
+      <div class="row">
+        <div class="col">
+          <div class="pr-3">
+            <h1>{{ page.title }}</h1>
+            {{ content }}
+          </div>
+        </div>
+        <aside class="col-3 sidebar">
+          {% include nav.html %}
+          {% include copyright.html %}
+        </aside>
+      </div>
+      {% include footer.html %}
+    </div>
+
+    <script>hljs.initHighlightingOnLoad();</script>
+    {% include last.html %}
+  </body>
+</html>
+
