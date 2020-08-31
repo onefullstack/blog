@@ -1,0 +1,35 @@
+.code-snippet {
+    pre, .code-header {
+        border-width: 1px;
+        border-style: solid;
+    }
+
+    .code-header {
+        box-sizing: content-box;
+        display: flex;
+        flex-direction: row;
+        min-height: 30px;
+        margin-top: 16px;        
+        border-bottom-width: 0px;
+        border-bottom-style: none;
+        
+        span.language {
+            font-size: 0.8rem;
+            flex-grow: 1;
+            padding: 2px 16px;
+        }
+    }
+
+    pre {
+        hyphens: none;
+        padding: 16px;
+        margin: 0;
+        line-height: 19px;
+        word-break: normal;
+        word-spacing: 0px;
+    }
+
+    code {
+        padding: 0px;
+    }
+}

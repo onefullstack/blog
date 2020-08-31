@@ -5,10 +5,11 @@ layout: post
 
 This is my content for this post.
 
-<pre><code class="lang-c#">
+{% include csharp_start.html %}
 public class Test() {
 
 }
-</code></pre>
+{% include csharp_end.html %}
+
 
 

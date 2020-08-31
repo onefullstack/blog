@@ -19,12 +19,12 @@
     {% if jekyll.environment == "production" %}
       {% include ga.html %}
     {% endif %}
-
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.2/build/styles/github-gist.min.css">
+    
     <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.2/build/highlight.min.js"></script>
+    <script src="/assets/js/codehighlight.js"></script>
   </head>
   <body>
-    <div class="container">
+    <div class="container post">
       {% include header.html %}
       <div class="row">
         <div class="col">
@@ -41,7 +41,6 @@
       {% include footer.html %}
     </div>
 
-    <script>hljs.initHighlightingOnLoad();</script>
     {% include last.html %}
   </body>
 </html>
