@@ -1,7 +1,15 @@
+@import 'themes';
+@import 'themify';
+
 .code-snippet {
     pre, .code-header {
         border-width: 1px;
         border-style: solid;
+
+        @include themify($themes) {
+            border-color: themed('codeBorderColor');
+            background-color: themed('codeBgColor');
+        }
     }
 
     .code-header {

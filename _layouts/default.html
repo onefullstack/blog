@@ -17,8 +17,8 @@
     {% endif %}
   </head>
   <body>
+    {% include header.html %}
     <div class="container">
-      {% include header.html %}
       <div class="row">
         <div class="col">
           <div class="pr-3">
@@ -30,8 +30,8 @@
           {% include copyright.html %}
         </aside>
       </div>
-      {% include footer.html %}
     </div>
+    {% include footer.html %}
 
     {% include last.html %}
   </body>
