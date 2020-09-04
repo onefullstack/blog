@@ -17,22 +17,23 @@
     {% endif %}
   </head>
   <body>
-    {% include header.html %}
-    <div class="container">
-      <div class="row">
-        <div class="col">
-          <div class="pr-3">
-            {{ content }}
+    <div id="root">
+      {% include header.html %}
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <div class="py-3 pr-3">
+              {{ content }}
+            </div>
           </div>
+          <aside class="col-3 sidebar">
+            {% include nav.html %}
+            {% include copyright.html %}
+          </aside>
         </div>
-        <aside class="col-3 sidebar">
-          {% include nav.html %}
-          {% include copyright.html %}
-        </aside>
       </div>
+      {% include footer.html %}
     </div>
-    {% include footer.html %}
-
     {% include last.html %}
   </body>
 </html>

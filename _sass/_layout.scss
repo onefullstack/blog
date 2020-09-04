@@ -8,13 +8,23 @@ html {
 
 body {  
     line-height: 160%;
+}
 
+@each $theme, $_ in $themes {
+    body.theme-#{$theme} {
+       background-color: map-get(map-get($themes, $theme), 'bgColor');
+       color: map-get(map-get($themes, $theme), 'color');
+    }
+}
+
+#root {
     header.site-header {
-        border-bottom-width: 1px;
         border-bottom-style: solid;
-        
+        border-bottom-width: 1px;
+       
         @include themify($themes) {
             border-bottom-color: themed('siteHeaderBorderColor');
+            box-shadow: themed('siteHeaderBoxShadow');
         }
 
         h1 {
@@ -25,14 +35,14 @@ body {
 
         .logo {
             width: 200px;
-            height: 42px; 
+            height: 32px; 
         }       
     }
-    
+
     aside.sidebar {
         display: block;
     }
-    
+
     @include media-breakpoint-down(sm) {
         aside.sidebar {
             display: none;
@@ -40,9 +50,4 @@ body {
     }
 }
 
-@each $theme, $_ in $themes {
-    body.theme-#{$theme} {
-       background-color: map-get(map-get($themes, $theme), 'bgColor');
-       color: map-get(map-get($themes, $theme), 'color');
-    }
-}
+
