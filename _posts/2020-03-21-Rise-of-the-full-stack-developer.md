@@ -1,7 +1,12 @@
 ---
 title: The rise of the full-stack developer
 layout: post
+excerpt_separator: <!--more-->
 ---
+
+This is a description of the post.
+
+<!--more-->
 
 This is my content for this post.
 

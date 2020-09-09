@@ -1,11 +1,12 @@
 $themes: (
     light: (
         bgColor: #fff,
-        color: blue,
+        color: rgba(0, 0, 0, 0.9),
         codeBorderColor: red,
         codeBgColor: #fff,
         siteHeaderBorderColor: rgba(0, 0, 0, 0.10),
         siteHeaderBoxShadow:  0 4px 12px 0 rgba(0, 0, 0, 0.05),
+        linkColor: rgba(0, 0, 0, 0.9),
     ),
     dark: (
         bgColor: #000,
@@ -14,5 +15,6 @@ $themes: (
         codeBgColor: #000,
         siteHeaderBorderColor: rgba(255, 255, 255, 0.10),
         siteHeaderBoxShadow:  0 4px 12px 0 rgba(255, 255, 255, 0.05),
+        linkColor: green,
     ),
 );
