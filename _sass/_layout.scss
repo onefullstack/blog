@@ -6,6 +6,10 @@ html {
     -webkit-font-smooting: antialiased;
 }
 
+h1 {
+    font-weight: 600;
+}
+
 body {  
     line-height: 160%;
 }
@@ -39,7 +43,7 @@ body {
 
         .logo {
             width: 200px;
-            height: 32px; 
+            height: 36px; 
         }       
     }
 

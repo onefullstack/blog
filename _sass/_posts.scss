@@ -1,10 +1,13 @@
+@import "themes";
 @import "themify";
 
 .post {
     .post-date {
-        font-size: $postDateFontSize;
-    }
+        font-weight: 200;
+        font-size: 0.9rem;
 
-    
+        @include themify($themes) {
+            color: themed('tertiaryColor');
+        }
+    }   
 }
-
