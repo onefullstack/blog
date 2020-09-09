@@ -20,19 +20,20 @@
 
     function setTheme(t) {
         localStorage.setItem('current-theme', t.id);
-        $('body').removeClass(themes.light.bodyClass).removeClass(themes.dark.bodyClass).addClass(t.bodyClass);
+        $('.logo img').attr('src', t.logo);
+        $('body')
+            .removeClass(themes.light.bodyClass)
+            .removeClass(themes.dark.bodyClass)
+            .addClass(t.bodyClass);
     }
 
     $(document).ready(function(){
-        $('body').addClass(getCurrentTheme().bodyClass);
+        setTheme(getCurrentTheme());
 
         $('#theme-toggle').click(function(e) {
             e.preventDefault();
             
             var nextTheme = (getCurrentTheme() === themes.light) ? themes.dark : themes.light;
-
-            $('.logo img').attr('src', nextTheme.logo);
-
             setTheme(nextTheme);
         });
     });
