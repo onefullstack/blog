@@ -1,0 +1,7 @@
+{% assign safeUrl = site.url + include.url | url_encode %}
+{% assign safeTitle = include.title | url_encode %}
+<ul class="social-sharing">
+    <li class="social-target"><a href="https://www.linkedin.com/shareArticle?mini=true&url={{safeUrl}}&title={{safeTitle}}"><i class="fab fa-linkedin"></i></a></li>
+    <li class="social-target"><a href="https://www.facebook.com/sharer/sharer.php?u={{safeUrl}}"><i class="fab fa-facebook-square"></i></a></li>
+    <li class="social-target"><a href="https://www.twitter.com/share?url={{safeUrl}}"><i class="fab fa-twitter"></i></a></li>
+</ul>

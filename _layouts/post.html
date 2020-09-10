@@ -21,7 +21,7 @@
     {% endif %}
     
     <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.2/build/highlight.min.js"></script>
-    <script src="/assets/js/codehighlight.js"></script>
+    <script src="/assets/js/codehighlight.js?v={{ site.time | date:'%s' }}"></script>
   </head>
   <body>
     <div id="root">
@@ -29,11 +29,14 @@
       <div class="container post">
         <div class="row">
           <div class="col">
-            <div class="py-5 pr-3">
+            <div class="py-5 px-3">
               <div class="post-date">
                 {{ page.date | date: '%w %b %Y' }}
               </div>
               <h1>{{ page.title }}</h1>
+              <div class="py-2">
+                {% include social.html url=page.url title=page.title %}
+              </div>
               {{ content }}
             </div>
           </div>
