@@ -38,6 +38,7 @@
                 {% include social.html url=page.url title=page.title %}
               </div>
               {{ content }}
+              {% include comments.html id=page.id url=page.url %}
             </div>
           </div>
           <aside class="col-3 py-5 sidebar">
