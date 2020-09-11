@@ -22,6 +22,11 @@ body {
        a {
            color: map-get(map-get($themes, $theme), 'linkColor');
        }
+
+       .legal {
+           color: map-get(map-get($themes, $theme), 'tertiaryColor');
+           font-size: 0.85rem;
+       }
     }
 }
 
@@ -64,3 +69,5 @@ body {
     text-align: center;
     line-height: 32px;
 }
+
+
