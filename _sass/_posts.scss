@@ -3,7 +3,7 @@
 
 .post {
     .post-date {
-        font-weight: 200;
+        font-weight: 100;
         font-size: 0.9rem;
 
         @include themify($themes) {
