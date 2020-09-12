@@ -1,0 +1,12 @@
+---
+# Feel free to add content and custom Front Matter to this file.
+# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
+
+layout: default
+---
+
+<div class="post">
+  {% include post_header.html title=site.posts.last.title subtitle=site.posts.last.subtitle author=site.posts.last.author %}
+  {{ site.posts.last.content }}
+  {% include post_footer.html id=site.posts.last.id %}
+</div>

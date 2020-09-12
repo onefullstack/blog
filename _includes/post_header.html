@@ -1,0 +1,14 @@
+<header class="py-3">
+    <h1>{{ include.title }}</h1>
+    {% if include.subtitle %}
+    <h2>{{ include.subtitle }}</h2>
+    {% endif %}
+
+    <div class="py-3">
+        {% include post_meta.html author=include.author %}
+    </div>
+    <div class="py-3 float-right">
+        {% include post_social.html url=include.url title=include.title %}
+    </div>
+    
+</header>

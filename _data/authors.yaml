@@ -1,0 +1,12 @@
+derek-smith:
+  name: Derek Smith
+  image: https://media.onefullstack.com/authors/derek/derek-headshot2.jpg
+  bio: |
+    Derek is Co-founder and CTO of Naveego, Inc. His belief that leading-edge analytics
+    should be in reach for everyone led to the development of the Naveego business
+    intelligence platform. Naveego brings all of a business’ data together, visually
+    and in real time, with an end-to-end solution that includes a built-in data warehouse,
+    dashboards, analytics and reports.
+  email: derek.smith@naveego.com
+  facebook: https://www.facebook.com/Naveego/
+  linkedin: https://www.linkedin.com/in/derekssmith

@@ -1,6 +1,7 @@
 ---
 title: The rise of the full-stack developer
 layout: post
+author: derek-smith
 excerpt_separator: <!--more-->
 ---
 
