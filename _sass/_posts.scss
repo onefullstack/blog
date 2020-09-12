@@ -2,6 +2,11 @@
 @import "themify";
 
 .post {
+
+    img {
+        max-width: 100%;
+    }
+
     .post-date {
         font-weight: 300;
         font-size: 0.9rem;

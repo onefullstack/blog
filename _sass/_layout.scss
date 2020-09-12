@@ -49,6 +49,32 @@ body {
         .logo {
             width: 200px;
         }       
+
+        nav {
+            ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+
+                li {
+                    display: inline-block;
+                    font-weight: 300;
+
+                    .separator {
+                        
+                        @include themify($themes) {
+                            background: themed('siteHeaderSeparatorBg');
+                        }
+
+                        height: 100%;
+                        width: 1px;
+                        border: 0;
+                        padding: 0;
+                        margin: 0;
+                    }
+                }
+            }
+        }
     }
 
     aside.sidebar {

@@ -12,4 +12,4 @@ layout: default
 
 # {{ site.posts.last.title }}
 [Read More]({{ site.posts.last.url }})
-{{ site.posts.last.excerpt }}
+{{ site.posts.last.content }}
