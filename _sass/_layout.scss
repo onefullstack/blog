@@ -8,10 +8,19 @@ html {
 
 h1 {
     font-weight: 600;
+
+    a:hover {
+        text-decoration: none;
+    }
 }
 
 body {  
     line-height: 160%;
+    color: #000;
+
+    a {
+        color: #000;
+    }
 }
 
 @each $theme, $_ in $themes {

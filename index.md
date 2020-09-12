@@ -10,6 +10,10 @@ layout: default
   {{ site.posts.last.date | date: '%w %b %Y' }}
 </div>
 
-# {{ site.posts.last.title }}
-[Read More]({{ site.posts.last.url }})
+# [{{ site.posts.last.title }}]({{site.posts.last.url}})
+
+<div class="py-2">
+  {% include social.html url=page.url title=page.title %}
+</div>
 {{ site.posts.last.content }}
+{% include comments.html id=site.posts.last.id %}
