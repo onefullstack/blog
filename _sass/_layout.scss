@@ -17,6 +17,7 @@ h1 {
 body {  
     line-height: 160%;
     color: #000;
+    visibility: hidden;
 
     a {
         color: #000;
@@ -25,6 +26,7 @@ body {
 
 @each $theme, $_ in $themes {
     body.theme-#{$theme} {
+       visibility: visible !important;
        background-color: map-get(map-get($themes, $theme), 'bgColor');
        color: map-get(map-get($themes, $theme), 'color');
 
