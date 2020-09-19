@@ -26,13 +26,15 @@
   <body>
     <div id="root">
       {% include header.html %}
-      <div class="container post">
+      <div class="container">
         <div class="row">
           <div class="col">
             <div class="py-5 px-3">
-              {% include post_header.html title=page.title subtitle=page.subtitle author=page.author %}
-              {{ content }}
-              {% include post_footer.html id=page.id %}
+              <div class="post">
+                {% include post_header.html title=page.title subtitle=page.subtitle author=page.author %}
+                {{ content }}
+                {% include post_footer.html id=page.id %}
+              </div>
             </div>
           </div>
         </div>

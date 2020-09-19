@@ -61,7 +61,7 @@ body {
             width: 200px;
         }       
 
-        nav {
+        nav.full-nav {
             ul {
                 list-style: none;
                 padding: 0;
@@ -86,17 +86,22 @@ body {
                 }
             }
         }
-    }
-
-    aside.sidebar {
-        display: block;
-    }
-
-    @include media-breakpoint-down(sm) {
-        aside.sidebar {
+        
+        nav.condensed-nav {
             display: none;
         }
+
+        @include media-breakpoint-down(sm) {
+            nav.full-nav {
+                display: none;
+            }
+
+            nav.condensed-nav {
+                display: block;
+            }
+        }
     }
+
 }
 
 #theme-toggle {
