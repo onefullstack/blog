@@ -15,13 +15,17 @@ h1 {
 }
 
 body {  
-    line-height: 160%;
     color: #000;
     visibility: hidden;
 
     a {
         color: #000;
+
+        &:hover {
+            text-decoration: none;
+        }
     }
+
 }
 
 @each $theme, $_ in $themes {
@@ -59,9 +63,9 @@ body {
 
         .logo {
             width: 200px;
-        }       
+        }  
 
-        nav.full-nav {
+        nav {
             ul {
                 list-style: none;
                 padding: 0;
@@ -72,13 +76,6 @@ body {
                     font-weight: 300;
 
                     .separator {
-                        
-                        @include themify($themes) {
-                            background: themed('siteHeaderSeparatorBg');
-                        }
-
-                        height: 100%;
-                        width: 1px;
                         border: 0;
                         padding: 0;
                         margin: 0;
@@ -86,9 +83,52 @@ body {
                 }
             }
         }
+
+        nav.full-nav ul li.separator {          
+            @include themify($themes) {
+                background: themed('siteHeaderSeparatorBg');
+            }
+            
+            height: 100%;
+            width: 1px;
+        }
         
         nav.condensed-nav {
             display: none;
+
+            i {
+                font-size: 1.5rem;
+                line-height: 34px;
+            }
+
+            .dropdown {
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                height: 100vh;
+                width: 100vw;
+                z-index: 99;
+                
+                @include themify($themes) {
+                    background-color: themed('bgColor');
+                }
+
+                ul li {
+                    display: block;
+                    .separator {
+                        background-color: #000;
+                        height: 1px;
+                        width: 100%;
+                    }
+                }
+            }
+
+            #close-nav {
+                position: absolute;
+                top: 10px;
+                left: calc(100vw - 50px);
+            }
         }
 
         @include media-breakpoint-down(sm) {
@@ -104,12 +144,10 @@ body {
 
 }
 
-#theme-toggle {
+.theme-toggle i {
     display: inline-block;
     width: 32px;
     height: 32px;
     text-align: center;
     line-height: 32px;
 }
-
-

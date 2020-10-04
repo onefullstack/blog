@@ -30,7 +30,7 @@
     $(document).ready(function(){
         setTheme(getCurrentTheme());
 
-        $('#theme-toggle').click(function(e) {
+        $('.theme-toggle').click(function(e) {
             e.preventDefault();
             
             var nextTheme = (getCurrentTheme() === themes.light) ? themes.dark : themes.light;

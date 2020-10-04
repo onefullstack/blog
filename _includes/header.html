@@ -9,13 +9,21 @@
             <div class="pr-3">
                 <nav class="full-nav">
                     <ul>
-                        <li><a href="#" id="theme-toggle"><i class="fas fa-adjust"></i></a></li>
+                        <li><a href="#" class="theme-toggle"><i class="fas fa-adjust"></i></a></li>
                         <li class="pl-2 pr-3"><div class="separator">&nbsp;</div></li>
                         <li><a href="https://tinyletter.com/onefullstack" target="_blank">Subscribe</a></li> 
                     </ul>                                 
                 </nav>
                 <nav class="condensed-nav">
-                    <i class="fas fa-bars"></i>
+                    <a id="open-nav" href="#"><i class="fas fa-bars"></i></a>
+                    <div class="dropdown p-5">
+                        <ul>
+                            <li class="p-2"><a href="#" class="theme-toggle"><i class="fas fa-adjust"></i><span>Toggle Theme</span></a></li>
+                            <li class="p-2"><div class="separator">&nbsp;</div></li>
+                            <li class="p-2"><a href="https://tinyletter.com/onefullstack" target="_blank">Subscribe</a></li> 
+                        </ul>
+                        <div id="close-nav"><a href="#"><i class="fas fa-times"></i></a></div>
+                    </div>
                 </nav>
             </div>
         </div>

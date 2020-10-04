@@ -36,6 +36,32 @@
                     margin: 0;
                 }
             }
+
+            .author-name {
+                font-weight: 600;
+            }
+
+            .date {
+                font-weight: 300;
+            }
+
+            .date-lg {
+                display: inline-block;
+            }
+
+            .date-sm {
+                display: none;
+            }
+
+            @include media-breakpoint-down(sm) {
+                .date-lg {
+                    display: none;
+                }
+
+                .date-sm {
+                    display: inline-block;
+                }
+            }
         }
 
         .post-social {
@@ -61,10 +87,10 @@
     }
 
     .comments {
-               
-
         @include themify($themes) {    
             color: themed('secondaryColor');
         }
     }
+
+   
 }
