@@ -1,4 +1,4 @@
-{% assign post = site.documents | where: "slug", include.slug | first %}
+{% assign post = site.posts | where: "slug", include.slug | first %}
 {% assign safeUrl = site.url + post.url | url_encode %}
 {% assign safeTitle = post.title | url_encode %}
 {% assign author = site.data.authors[post.author] %}
