@@ -11,7 +11,35 @@
     }
 
     header {
-        
+
+        h1 {
+            font-size: 3.4rem;
+            line-height: 4.2rem;
+            font-weight: 400;
+
+            @include themify($themes) {    
+                color: themed('titleColor');
+            }            
+
+            a {
+                @include themify($themes) {    
+                    color: themed('titleColor');
+                }   
+            }
+        }
+
+        h2 {
+            font-size: 2.1rem;
+            line-height: 2.7rem;
+            font-weight: 300;
+
+            @include themify($themes) {    
+                color: themed('subTitleColor');
+            }
+        }
+
+
+
         >div {
             display: inline-block;
         }
@@ -20,9 +48,9 @@
 
             >div {
                 display: inline-block;
-                line-height: 32px;
+                line-height: 3.2rem;
                 vertical-align: top;
-                font-size: 0.9rem;
+                font-size: 1.4rem;
             }
             
 
@@ -72,8 +100,8 @@
 
                 li.social-target {
                     display: inline-block;
-                    font-size: 1.2rem;
-                    line-height: 32px;
+                    font-size: 2.2rem;
+                    line-height: 3.2rem;
                     margin-right: 6px;
                     
                     a {
@@ -83,14 +111,36 @@
                     }
                 }
             }
-        }  
+        } 
+    }
+
+    p a {
+        @include themify($themes) {    
+            color: themed('linkColor');
+        }
+    }
+
+    blockquote {
+        border-left-style: solid;
+        border-left-width: 3px;
+        padding: 2.2rem 1.8rem;
+        font-style: italic;
+
+        @include themify($themes) {    
+            border-left-color: themed('blockquoteColor');
+            color: themed('blockquoteColor');
+        }
+    }
+
+    h3 {
+        font-size: 2.2rem;
+        margin-top: 3.8rem;
+        margin-block-start: 3.8rem;
     }
 
     .comments {
         @include themify($themes) {    
             color: themed('secondaryColor');
         }
-    }
-
-   
+    }  
 }
