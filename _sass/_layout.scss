@@ -56,9 +56,14 @@ body {
             box-shadow: themed('siteHeaderBoxShadow');
         }
 
-        .logo {
-          width: 300px;
+        .logo-med {
+            width: 300px;
         }  
+
+        .logo-sm {
+            width: 32px;
+            display: none;
+        }
 
         nav {
             ul {
@@ -132,6 +137,14 @@ body {
             }
 
             nav.condensed-nav {
+                display: block;
+            }
+
+            .logo {
+                display: none;
+            }
+
+            .logo-sm {
                 display: block;
             }
         }

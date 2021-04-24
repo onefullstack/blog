@@ -4,12 +4,14 @@
         light: {
             id: 'light',
             bodyClass: 'theme-light',
-            logo: '/assets/img/logo_white_bg.svg'
+            logo: '/assets/img/logo_white_bg.svg',
+            logoSm: '/assets/img/logo_white_bg_small.svg'
         },
         dark: {
             id: 'dark',
             bodyClass: 'theme-dark',
-            logo: '/assets/img/logo_dark_bg.svg'
+            logo: '/assets/img/logo_dark_bg.svg',
+            logoSm: '/assets/img/logo_dark_bg_small.svg'
         }
     }
 
@@ -20,7 +22,8 @@
 
     function setTheme(t) {
         localStorage.setItem('current-theme', t.id);
-        $('.logo img').attr('src', t.logo);
+        $('.logo-med img').attr('src', t.logo);
+        $('.logo-sm img').attr('src', t.logoSm);
         $('body')
             .removeClass(themes.light.bodyClass)
             .removeClass(themes.dark.bodyClass)
