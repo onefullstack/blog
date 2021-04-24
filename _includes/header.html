@@ -10,6 +10,7 @@
                 </div>
             </div>
             <div class="pr-3">
+                <!--
                 <nav class="full-nav">
                     <ul>
                         <li><a href="#" class="theme-toggle"><i class="fas fa-adjust"></i></a></li>
@@ -17,14 +18,11 @@
                         <li><a href="#" class="subscribe-button">Subscribe</a></li> 
                     </ul>                                 
                 </nav>
+                -->
                 <nav class="condensed-nav">
                     <a id="open-nav" href="#"><i class="fas fa-bars"></i></a>
                     <div class="dropdown p-5">
-                        <ul>
-                            <li class="p-2"><a href="#" class="theme-toggle"><i class="fas fa-adjust"></i><span>Toggle Theme</span></a></li>
-                            <li class="p-2"><div class="separator">&nbsp;</div></li>
-                            <li class="p-2"><a href="#" class="subscribe-button">Subscribe</a></li> 
-                        </ul>
+                        {% include links.html %}
                         <div id="close-nav"><a href="#"><i class="fas fa-times"></i></a></div>
                     </div>
                 </nav>

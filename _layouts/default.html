@@ -23,11 +23,16 @@
   <body>
     <div id="root">
       {% include header.html %}
-      <div class="container">
+      <div id="wrapper" class="container">
         <div class="row">
           <div class="col">
             <div class="py-4 px-3">
-              {{ content }}
+              <div class="content">
+                <aside class="sidebar py-4">
+                  {% include links.html %}
+                </aside>
+                {{ content }}
+              </div>
             </div>
           </div>
         </div>
@@ -35,6 +40,5 @@
       {% include footer.html %}
     </div>
     {% include last.html %}
-    {% include subscribe.html %}
   </body>
 </html>

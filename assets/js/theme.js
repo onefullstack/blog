@@ -24,6 +24,7 @@
         localStorage.setItem('current-theme', t.id);
         $('.logo-med img').attr('src', t.logo);
         $('.logo-sm img').attr('src', t.logoSm);
+        $('.theme-toggle').attr('data-event-label', t.id);
         $('body')
             .removeClass(themes.light.bodyClass)
             .removeClass(themes.dark.bodyClass)

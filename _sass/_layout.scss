@@ -64,42 +64,9 @@ body {
             width: 32px;
             display: none;
         }
-
-        nav {
-            ul {
-                list-style: none;
-                padding: 0;
-                margin: 0;
-
-                li {
-                    display: inline-block;
-                    font-weight: 300;
-
-                    .separator {
-                        border: 0;
-                        padding: 0;
-                        margin: 0;
-                    }
-                }
-            }
-        }
-
-        nav.full-nav ul li.separator {          
-            @include themify($themes) {
-                background: themed('siteHeaderSeparatorBg');
-            }
-            
-            height: 100%;
-            width: 1px;
-        }
-        
+       
         nav.condensed-nav {
             display: none;
-
-            i {
-                font-size: 1.6rem;
-                line-height: 3.4rem;
-            }
 
             .dropdown {
                 display: none;
@@ -112,15 +79,6 @@ body {
                 
                 @include themify($themes) {
                     background-color: themed('bgColor');
-                }
-
-                ul li {
-                    display: block;
-                    .separator {
-                        background-color: #000;
-                        height: 1px;
-                        width: 100%;
-                    }
                 }
             }
 
@@ -150,6 +108,33 @@ body {
         }
     }
 
+    
+
+    #wrapper {
+        .content {
+            max-width: 1000px;
+            margin: auto;
+            display: flex;
+        }
+
+        aside.sidebar {
+            flex: 200px 0 0;
+        }
+
+        @include media-breakpoint-down(sm) {
+            aside.sidebar {
+                display: none;
+            }
+        }
+    }
+
+    footer {
+        .content {
+            max-width: 1000px;
+            margin: auto;
+        }
+    }
+
 }
 
 .theme-toggle i {
@@ -158,4 +143,17 @@ body {
     height: 32px;
     text-align: center;
     line-height: 32px;
+}
+
+.links {
+    font-size: 1.4rem;
+    ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+
+        li {
+            line-height: 2.4rem;
+        }
+    }
 }
