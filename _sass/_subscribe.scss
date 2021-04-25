@@ -13,27 +13,48 @@
         background-color: themed('subscribeBgColor');
     }
     
-    .form-control {
-        font-size: 1.4rem;
-    }
-
-    .btn {
-        font-size: 1.4rem;
-    }
+   
 }
 
 #subscribe_form {
 
     padding: 2rem 4rem;
+    width: 400px;
 
     @include themify($themes) {
         background-color: themed('subscribeFormBgColor');
     }
 
+    .form-logo {
+        text-align: center;
+    }
+
+    @include media-breakpoint-down(sm) {
+        width: 100vw;
+        height: 100vh;
+    }
+
+    img {
+        max-width: 350px;
+    }
+
     form {
+
+        max-width: 400px;
+        margin: auto;
+
         >div {
             margin: 24px 0;
         }
+    }
+
+    .form-control {
+        font-size: 1.4rem;
+        
+    }
+
+    .btn {
+        font-size: 1.4rem;
     }
 }
 
