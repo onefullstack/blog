@@ -1,6 +1,4 @@
 (function($) {
-
-    
     var subscribe = $('#subscribe'),
         subscribeForm = $('#subscribe_form'),
         subscribeClose = $('#subscribe_close');
@@ -21,6 +19,4 @@
         evt.preventDefault();
         subscribe.css('display', 'none');
     });
-    
-
 })(jQuery);
