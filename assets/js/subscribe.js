@@ -7,6 +7,7 @@
         if(ga) {
             ga('send', 'event', 'Subscribe', 'submit', 'email', 1);
         }
+        subscribe.css('display', 'none');
     });
 
     $('.subscribe-button').click(function(evt) {

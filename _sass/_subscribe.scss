@@ -65,4 +65,8 @@
     font-size: 3.2rem;
     display: inline-block;
     color: #fff;
+
+    @include media-breakpoint-down(sm) {
+        color: #000;
+    }
 }
