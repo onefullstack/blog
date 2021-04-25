@@ -43,6 +43,15 @@
             </div>
           </div>
         </div>
+        <div class="row">
+          <div class="col">
+            <div class="content">
+              {% if page.comments %}
+              {% include comments.html %}
+              {% endif %}
+            </div>
+          </div>
+        </div>
       </div>
       {% include footer.html %}
     </div>

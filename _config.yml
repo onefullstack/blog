@@ -30,8 +30,14 @@ theme: minima
 plugins:
   - jekyll-feed
 
-feed:
-  path: atom.xml
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: post
+      comments: true
+      author: derek-smith
   
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
