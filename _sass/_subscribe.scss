@@ -1,0 +1,46 @@
+#subscribe {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 999999;
+    justify-content: center;
+    align-items: center;
+    
+    @include themify($themes) {
+        background-color: themed('subscribeBgColor');
+    }
+    
+    .form-control {
+        font-size: 1.4rem;
+    }
+
+    .btn {
+        font-size: 1.4rem;
+    }
+}
+
+#subscribe_form {
+
+    padding: 2rem 4rem;
+
+    @include themify($themes) {
+        background-color: themed('subscribeFormBgColor');
+    }
+
+    form {
+        >div {
+            margin: 24px 0;
+        }
+    }
+}
+
+#subscribe_close {
+    position: fixed;
+    top: 32px;
+    right: 64px;
+    font-size: 3.2rem;
+    display: inline-block;
+}
