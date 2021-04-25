@@ -82,6 +82,11 @@ body {
                 }
             }
 
+            #open-nav {
+                display: block;
+                line-height: 32px;
+            }
+
             #close-nav {
                 position: absolute;
                 top: 10px;
@@ -115,17 +120,21 @@ body {
             max-width: 1000px;
             margin: auto;
             display: flex;
-        }
 
-        aside.sidebar {
-            flex: 200px 0 0;
-        }
-
-        @include media-breakpoint-down(sm) {
-            aside.sidebar {
-                display: none;
+            .content-wrap {
+                flex: 1;
             }
-        }
+
+            aside.sidebar {
+                flex: 200px 0 0;
+            }
+
+            @include media-breakpoint-down(sm) {
+                aside.sidebar {
+                    display: none;
+                }
+            }
+        }        
     }
 
     footer {
