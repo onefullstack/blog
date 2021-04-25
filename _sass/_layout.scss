@@ -43,6 +43,10 @@ body {
            color: map-get(map-get($themes, $theme), 'tertiaryColor');
            font-size: 1.2rem;
        }
+
+       #why {
+            color: map-get(map-get($themes, $theme), 'tertiaryColor');
+       }
     }
 }
 
@@ -175,4 +179,11 @@ body {
 
 .btn {
     font-size: 1.2rem;
+}
+
+#why {
+    font-size: 1.2rem;
+    padding-block-start: 24px;
+    padding-top: 24px;
+    padding-right: 18px;
 }
