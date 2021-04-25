@@ -92,6 +92,14 @@ body {
                 top: 10px;
                 left: calc(100vw - 50px);
             }
+
+            .links {
+                font-size: 1.8rem;
+
+                li {
+                    line-height: 3.2rem;
+                }
+            }
         }
 
         @include media-breakpoint-down(sm) {
@@ -166,3 +174,4 @@ body {
         }
     }
 }
+
