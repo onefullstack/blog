@@ -1,8 +1,9 @@
 @import "themes";
 @import "themify";
 
-.post {   
+article.post {   
     
+    padding: 0 48px;
     width: 100%;
 
     img {
@@ -136,12 +137,6 @@
         margin-top: 3.8rem;
         margin-block-start: 3.8rem;
     }
-
-    .comments {
-        @include themify($themes) {    
-            color: themed('secondaryColor');
-        }
-    }  
 }
 
 #disqus_thread {
