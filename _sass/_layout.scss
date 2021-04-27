@@ -78,6 +78,7 @@ body {
        
         nav.condensed-nav {
              display: none;
+             text-align: right;
 
             .dropdown {
                 display: none;
@@ -96,12 +97,6 @@ body {
             #open-nav {
                 display: block;
                 line-height: 32px;
-            }
-
-            #close-nav {
-                position: absolute;
-                top: 10px;
-                left: calc(100vw - 50px);
             }
 
             .links {
