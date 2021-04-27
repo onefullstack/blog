@@ -6,7 +6,7 @@
             $('header.site-header nav .dropdown').show();
         });
 
-        $('#close-nav').click(function(e) {
+        $('#close-nav, .condensed-nav .subscribe-button').click(function(e) {
             e.preventDefault();
             $('header.site-header nav .dropdown').hide();
         });
