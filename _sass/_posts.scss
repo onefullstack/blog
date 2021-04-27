@@ -122,3 +122,16 @@ article.post {
 #disqus_thread {
     width: 100%;
 }
+
+#comments_separator {
+    h3 {
+        font-size: 1.8rem;
+        @include themify($themes) {    
+            color: themed('tertiaryColor');
+        }
+        margin-block-start: 5rem;
+        margin-top: 5rem;
+        padding-block-start: 1rem;
+        padding-top: 1rem;
+    }
+}

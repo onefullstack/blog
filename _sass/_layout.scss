@@ -52,12 +52,19 @@ body {
 
 #root {
     header.site-header {
+       
         border-bottom-style: solid;
         border-bottom-width: 1px;
        
         @include themify($themes) {
             border-bottom-color: themed('siteHeaderBorderColor');
             box-shadow: themed('siteHeaderBoxShadow');
+        }
+
+        .content {
+            max-width: 1000px;
+            margin: auto;
+            padding: 0;
         }
 
         .logo-med {
@@ -70,7 +77,7 @@ body {
         }
        
         nav.condensed-nav {
-            display: none;
+             display: none;
 
             .dropdown {
                 display: none;
