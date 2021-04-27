@@ -2,8 +2,12 @@
 layout: default
 ---
 
-<div class="post">
-{% include post_header.html slug=site.posts.first.slug %}
-{{ site.posts.first.content }}
-{% include post_footer.html id=site.posts.first.id %}
-</div>
+<article class="post">
+    <header>
+        {% include post_header.html slug=site.posts.first.slug %}
+    </header>
+    {{ site.posts.first.content }}
+    <footer>
+        {% include comments.html url=site.posts.first.url id=site.posts.first.id %}
+    </footer>
+</article>

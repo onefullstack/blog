@@ -23,14 +23,13 @@
   <body>
     <div id="root">
       {% include header.html %}
-      <div id="wrapper" class="container">
+      <div id="wrapper" class="container-fluid">
         <div class="row">
           <div class="col">
             <div class="py-4 px-3">
               <div class="content">
                 <aside class="sidebar py-4">
-                  {% include links.html %}
-                  {% include why.html %}
+                  {% include sidebar.html %}
                 </aside>
                 <div class="content-wrap">
                   {{ content }}

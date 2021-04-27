@@ -3,35 +3,34 @@
 {% assign safeTitle = post.title | url_encode %}
 {% assign author = site.data.authors[post.author] %}
 
-<header class="py-3">
-    {% if page.url != post.url %}
-    <h1><a href="{{post.url}}">{{ post.title }}</a></h1>
-    {% else %}
-    <h1>{{ post.title }}</h1>
-    {% endif %}
 
-    {% if post.subtitle %}
-    <h2>{{ post.subtitle }}</h2>
-    {% endif %}
+{% if page.url != post.url %}
+<h1><a href="{{post.url}}">{{ post.title }}</a></h1>
+{% else %}
+<h1>{{ post.title }}</h1>
+{% endif %}
 
-    <div class="py-3">
-        <div class="post-meta">
-            {% if author %}
-                <div class="author-photo mr-2"><img src="{{author.picture}}" alt="{{author.name}}" /></div>
-                <div class="author-name mr-1">{{ author.name }}</div>
-            {% endif %}
-            
-            <div class="date date-lg">{{ post.date | date: '%B %e, %Y' }}</div>
-            <div class="date date-sm">{{ post.date | date: '%b %e, %Y' }}</div>
+{% if post.subtitle %}
+<h2>{{ post.subtitle }}</h2>
+{% endif %}
+
+<div class="py-3">
+    <div class="post-social">
+        <ul>
+            <li class="social-target"><a href="https://www.linkedin.com/shareArticle?mini=true&url={{safeUrl}}&title={{safeTitle}}"><i class="fab fa-linkedin"></i></a></li>
+            <li class="social-target"><a href="https://www.facebook.com/sharer/sharer.php?u={{safeUrl}}"><i class="fab fa-facebook-square"></i></a></li>
+            <li class="social-target"><a href="https://www.twitter.com/share?url={{safeUrl}}"><i class="fab fa-twitter"></i></a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="py-3">
+    <div class="post-meta">
+        <div class="author-photo mr-2"><img src="{{author.picture}}" alt="{{author.name}}" /></div>
+        <div class="author-deets">
+            <div class="author-name">{{ author.name }}</div>
+            <div class="date">{{ post.date | date: '%b %e, %Y' }}</div>
         </div>
     </div>
-    <div class="py-3 float-right">
-        <div class="post-social">
-            <ul>
-                <li class="social-target"><a href="https://www.linkedin.com/shareArticle?mini=true&url={{safeUrl}}&title={{safeTitle}}"><i class="fab fa-linkedin"></i></a></li>
-                <li class="social-target"><a href="https://www.facebook.com/sharer/sharer.php?u={{safeUrl}}"><i class="fab fa-facebook-square"></i></a></li>
-                <li class="social-target"><a href="https://www.twitter.com/share?url={{safeUrl}}"><i class="fab fa-twitter"></i></a></li>
-            </ul>
-        </div>
-    </div>
-</header>
+</div>
+

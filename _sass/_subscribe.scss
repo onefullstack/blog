@@ -60,10 +60,10 @@
 
 #subscribe_close {
     position: fixed;
-    top: 32px;
-    right: 64px;
+    top: 24px;
+    right: 32px;
     font-size: 3.2rem;
-    display: inline-block;
+    line-height: 2.8rem;
     color: #fff;
 
     @include media-breakpoint-down(sm) {

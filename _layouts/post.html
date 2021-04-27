@@ -26,31 +26,26 @@
   <body>
     <div id="root">
       {% include header.html %}
-      <div id="wrapper" class="container">
+      <div id="wrapper" class="container-fluid">
         <div class="row">
           <div class="col">
             <div class="py-4 px-3">
               <div class="content">
                 <aside class="sidebar py-4">
-                  {% include links.html %}
-                  {% include why.html %}
-                  {% include legal.html %}
+                  {% include sidebar.html %}
                 </aside>
                 <article class="post">
-                  {% include post_header.html title=page.title subtitle=page.subtitle author=page.author %}
+                  <header class="py-3">
+                    {% include post_header.html title=page.title subtitle=page.subtitle author=page.author %}
+                  </header>
                   {{ content }}
-                  {% include post_footer.html id=page.id %}
+                  <footer>
+                    {% if page.comments %}
+                    {% include comments.html url=post.url id=post.id %}
+                    {% endif %}
+                  </footer>
                 </article>
               </div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col">
-            <div class="content">
-              {% if page.comments %}
-              {% include comments.html %}
-              {% endif %}
             </div>
           </div>
         </div>
