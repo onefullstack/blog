@@ -52,13 +52,16 @@ body {
 
 #root {
     header.site-header {
-       
+        top: 0;
+        z-index: 99999;
+        position: sticky;
         border-bottom-style: solid;
         border-bottom-width: 1px;
        
         @include themify($themes) {
             border-bottom-color: themed('siteHeaderBorderColor');
             box-shadow: themed('siteHeaderBoxShadow');
+            background-color: themed('bgColor');
         }
 
         .content {
