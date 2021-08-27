@@ -26,7 +26,7 @@
 
 <div class="py-3">
     <div class="post-meta">
-        <div class="author-photo mr-2"><img src="{{author.picture}}" alt="{{author.name}}" /></div>
+        <div class="author-photo mr-2"><div class="photo-outer"><div class="photo-inner"><img src="{{author.picture}}" alt="{{author.name}}" /></div></div></div>
         <div class="author-deets">
             <div class="author-name">{{ author.name }}</div>
             <div class="date">{{ post.date | date: '%b %e, %Y' }}</div>
